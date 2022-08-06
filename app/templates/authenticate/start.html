@@ -1,0 +1,27 @@
+{% extends 'authenticate/base1.html' %}
+
+{% block content %}
+<main>
+    <nav>
+        <div class="logo">
+            {% comment %} {% load static %}
+            <img src="{% static 'static/assets/netflix_logof.png' %}" alt="logo"> {% endcomment %}
+            <img alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png">
+        </div>
+        <div class="signinbtn">
+            <a href=""><button class="btn "style="background-color:rgb(228,8,20);color:white;">sign in</button></a>
+        </div>
+    </nav>
+{% comment %} <div class="our-story-card-animation" data-uia="our-story-card-animation">
+    <div class="our-story-card-animation-image">
+        <img alt="" src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/boxshot.png">
+    </div><div class="our-story-card-animation-text">
+        <div id="" class="text-0" data-uia="">Stranger Things</div>
+        <div id="" class="text-1" data-uia="">Downloading...</div>
+    </div>
+    <div class="our-story-card-animation-custom" data-uia="our-story-card-custom" aria-hidden="true">
+
+    </div>
+</div> {% endcomment %}
+</main>
+{% endblock %}
