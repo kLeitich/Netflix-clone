@@ -32,13 +32,14 @@
         <div class="container d-flex">
             
             <div class="text-start text-white">
-                <br><br><br>
+                <br><br><br><br><br><br><br><br>
                 <p class="p-2 fs-1 fw-bold">Enjoy on your TV.</p>
                 <p>Watch on Smart TVs, Playstation, Xbox,<br> Chromecast, Apple TV, Blu-ray players, and<br> more.</p>
-                <br><br><br>
+                
             </div>
-            <div class="pic-start p-4">
-                <img src="{% static 'assets/netflix_logof.png' %}" alt="logo" class="img-fluid p-4" >
+            <div class="pic-start p-4" style="background-image: url({% static 'assets/tv.png' %});">
+                <video src="{% static 'assets/video-tv-0819.m4v' %}" autoplay muted></video>
+               
             </div>
         </div>
     </section>
