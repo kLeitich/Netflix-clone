@@ -3,7 +3,7 @@
 {% block content %}
 <main style="background-color:black;">
     <nav>
-        <div class="d-flex flex-row justify-content-between px-4 pt-2 fixed-top">
+        <div class="d-flex justify-content-between px-4 pt-2 fixed-top">
             <div class="logo">
                 {% load static %}
                 <img src="{% static 'assets/netflix_logof.png' %}" alt="logo" class="img-fluid" style="height:10vh;">
@@ -23,7 +23,7 @@
         <p>Ready to watch? Enter your email to create or restart your membership.</p>
         <form action="">
             <input type="email" name="email" id="email">
-            <button class="btn "style="background-color:rgb(228,8,20);color:white;">Get Started<i class="bi bi-play"></i></button>
+            <button class="btn "style="background-color:rgb(228,8,20);color:white;">Get Started<i class="bi bi-chevron-right"></i></button>
         </form>
      </div>
      <br><br><br><br><br><br>
@@ -90,7 +90,7 @@
             <div class="container text-white">
                 <h2>Have an Android Phone? Get our new free plan!</h2>
                 <p>Watch a selection of new movies and TV shows without adding any payment details!</p>
-                <p>Get the app<i class="bi bi-play"></i></p>
+                <p>Get the app<i class="bi bi-chevron-right"></i></p>
             </div>
             <div class="container">
                 <img src="{% static 'assets/phone_start.jpg'%}" alt="" class="img-fluid">
@@ -98,6 +98,54 @@
         </div>
     </section>
     <hr class="border border-dark border-5 opacity-75">
-
+    <section>
+        <div class="container text-center gap-3 d-grid">
+            <h1 class="text-white">Frequently Asked Questions</h1>
+            <div class="d-grid gap-3">
+                <div class="p-2 text-white text-start"style="background:#313031;">What is netflix?<i class="bi bi-plus"></i></div>
+                <div class="p-2 text-white text-start"style="background:#313031;">What is netflix?<i class="bi bi-plus"></i></div>
+                <div class="p-2 text-white text-start"style="background:#313031;">What is netflix?<i class="bi bi-plus"></i></div>
+                <div class="p-2 text-white text-start"style="background:#313031;">What is netflix?<i class="bi bi-plus"></i></div>
+                <div class="p-2 text-white text-start"style="background:#313031;">What is netflix?<i class="bi bi-plus"></i></div>
+                <div class="p-2 text-white text-start"style="background:#313031;">What is netflix?<i class="bi bi-plus"></i></div>
+            </div>
+            <p class="text-white">Ready to watch? Enter your email to create or restart your membership.</p>
+            <form action="">
+                <input type="email" name="email" id="email">
+                <button class="btn "style="background-color:rgb(228,8,20);color:white;">Get Started<i class="bi bi-chevron-right"></i></button>
+            </form>
+    </section>
+    <hr class="border border-dark border-5 opacity-75">
+    <section class="p-4">
+        <div class="container" style="color:#313031">
+            <h3>Questions? Contact us.</h3>
+            <div class="d-flex">
+                <div class="col">
+                    <p>FAQ</p>
+                    <p>Investor Relations</p>
+                    <P>Privacy</P>
+                    <p>Speedtest</p>
+                </div>
+                <div class="col">
+                    <p>Help Center</p>
+                    <p>Jobs</p>
+                    <P>Cookies Preferences</P>
+                    <p>Legal Notices</p>
+                </div>
+                <div class="col">
+                    <p>Account</p>
+                    <p>Ways to Watch</p>
+                    <P>Corporate Information</P>
+                    <p>Only on Netflix</p>
+                </div>
+                <div class="col">
+                    <p>Media Center</p>
+                    <p>Terms of Use</p>
+                    <P>Contact Us</P>
+                </div>
+            </div>
+            <p>Netflix Kenya</p>
+        </div>
+    </section>
 </main>
 {% endblock %}
