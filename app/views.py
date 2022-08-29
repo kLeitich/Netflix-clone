@@ -8,3 +8,9 @@ def home(request):
 def start(request):
     return render(request,"authenticate/start.html")
 
+def register(request):
+    return render(request,'sign_up.html')
+
+def login(request):
+    return render(request,'log_in.html')
+
