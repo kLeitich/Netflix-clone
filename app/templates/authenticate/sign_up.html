@@ -8,30 +8,88 @@
             <img src="{% static 'assets/netflix_logof.png' %}" alt="logo" class="img-fluid" style="height:15vh;">
         </div>
         <div class="signinbtn">
-            <a href=""><button class="btn fs-3 fw-bold"style="background-color:white;">sign in</button></a>
+            <a href=""><button class="btn fs-3"style="background-color:white;">sign in</button></a>
         </div>
     </div>
 </nav>
-<div class="container">
-    <div class="row">
-        <div class="col"></div>
-        <div class="col">
-            <form action="" method="POST">
-                {% csrf_token %}
-
-                {% for field in form %}
-                    <div>
-                        <p>{{ field.label }}: <br> {{ field }}</p> 
-
-                        {% for error in field.errors %}
-                            <small style="color: red">{{ error }}</small>
-                        {% endfor %}
-                    </div>
-                {% endfor %}
-                <button type="submit">Register</button>
-            </form>
+<hr>
+<div class="step">
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-6">
+               <div class="top text-center p-4">
+                <img src="{% static 'assets/Devices.png' %}" alt="devices" class="img-fluid">
+                <p>Step 1 of 3</p>
+                <h2>Finish setting up your account</h2>
+                <p class="fs-5">Netflix is personalized for you. Create a password to watch on any device at any time.</p>
+                <button class="btn fs-5" style="background-color:rgb(228,8,20);color:white;height: 70px;width:100%;">Next</button>
+               </div>
+            </div>
+            <div class="col"></div>
         </div>
-        <div class="col"></div>
     </div>
-</div>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-6">
+                <div class="top  p-4">
+                    <p>Step 1 of 3</p>
+                    <h2>Create a password to start your membership</h2>
+                    <p class="fs-5">Just a few more steps and you're done!
+                        We hate paperwork, too.</p>
+                    <form action="" method="POST">
+                    {% csrf_token %}
+    
+                        <div class="input-group">
+                            <p>{{ form.email }}</p> 
+                             
+    
+                            {% for error in field.errors %}
+                                <small style="color: red">{{ error }}</small>
+                            {% endfor %}
+                        </div>
+                        <div class="input-group">
+                            <p><p>{{ form.password1 }}</p></p>
+                        </div>
+                        <div class="input-group">
+                            <input type="checkbox" name="marketing" id="mrkt" > Please Do not email Marketing offers.
+                        </div>
+                        <button class="btn fs-5" style="background-color:rgb(228,8,20);color:white;height: 70px;width:100%;" type="submit">Next</button>
+                </form> 
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-6">
+                <div class="top text-center p-4">
+                    <img src="{% static 'assets/Checkmark.png' %}" alt="devices" class="img-fluid">
+                    <p>Step 1 of 3</p>
+                </div>
+                <div class=" container list">
+                    <h2>Choose your plan.</h2>
+                    <ul>
+                        <li class="fs-3" style="list-style: none;"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="86" fill="#e50914" class="bi bi-check-lg float-start" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                          </svg> No commitments, cancel anytime.</li>
+                        <li class="fs-4" style="list-style: none;"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="86" fill="#e50914" class="bi bi-check-lg float-start" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                          </svg>Everything on Netflix for one low price.</li>
+                        <li class="fs-4" style="list-style: none;"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="86" fill="#e50914" class="bi bi-check-lg float-start" viewBox="0 0 16 16">
+                            <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+                          </svg>No ads and no extra fees. Ever.</li>
+                    </ul>
+                </div>
+                <button class="btn fs-5" style="background-color:rgb(228,8,20);color:white;height: 70px;width:100%;" type="submit">Next</button>
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+   
+    
+    
 {% endblock %}
