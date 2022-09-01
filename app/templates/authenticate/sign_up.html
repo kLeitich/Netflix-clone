@@ -99,36 +99,36 @@
         </ul>
         <table class="table">
             <thead>
-              <tr>
+              <tr class="">
                 <th scope="col"></th>
-                <th scope="col">Mobile</th>
-                <th scope="col">Basic</th>
-                <th scope="col">Standard</th>
-                <th scope="col">Premium</th>
+                <th scope="col" class="text-center" style="background:#e50914;height: 100px;color:white;">Mobile</th>
+                <th scope="col" class="text-center" style="background:#e50914;height: 100px;color:white;">Basic</th>
+                <th scope="col" class="text-center" style="background:#e50914;height: 100px;color:white;">Standard</th>
+                <th scope="col" class="text-center" style="background:#e50914;height: 100px;color:white;">Premium</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 {% comment %} <th scope="row">Monthly Price</th> {% endcomment %}
                 <td>Monthly Price</td>
-                <td>KES300</td>
-                <td>KES700</td>
-                <td>KES1100</td>
-                <td>KES1450</td>
+                <td class="text-center">KES300</td>
+                <td class="text-center">KES700</td>
+                <td class="text-center">KES1100</td>
+                <td class="text-center">KES1450</td>
               </tr>
               <tr>
                 <td>Video Quality</td>
-                <td>Good</td>
-                <td>Good</td>
-                <td>Better</td>
-                <td>Best</td>
+                <td class="text-center">Good</td>
+                <td class="text-center">Good</td>
+                <td class="text-center">Better</td>
+                <td class="text-center">Best</td>
               </tr>
               <tr>
                 <td>Resolution</td>
-                <td>480p</td>
-                <td>480p</td>
-                <td>1080p</td>
-                <td>4K+HDR</td>
+                <td class="text-center">480p</td>
+                <td class="text-center">480p</td>
+                <td class="text-center">1080p</td>
+                <td class="text-center">4K+HDR</td>
               </tr>
               <tr>
                 <td>Devices you can use to watch</td>
@@ -254,11 +254,21 @@
                 <h2>Choose how to pay</h2>
                 <p class="fs-5">Your payment is encrypted and you can change how you pay anytime.</p>
                 <p class="fs-5 fw-bold">Secure for peace of mind. <br>Cancel easily online.</p>
-                <button class="btn-outline fs-5" style="height: 70px;width:100%;">Next</button>
+                <small class="float-end">End-to-end encrypted<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#FFB53F" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                  </svg></small>
+                <button class="btn-outline fs-5" style="height: 70px;width:100%;">
+                    <div class="float-start">
+                        Credit or Debit Card
+                    <img src="{% static 'assets/visa-v3.svg' %}" alt="visa" class="img-fluid" style="height: 18px;">
+                    <img src="{% static 'assets/mastercard-v2.svg' %}" alt="mastercard" class="img-fluid" style="height: 18px;">
+                    </div>
+                    <i class="bi bi-chevron-right float-end"></i>
+                </button>
                </div>
             </div>
             <div class="col"></div>
         </div>
     </div>
-    
+</div>  
 {% endblock %}
